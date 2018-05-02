@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h3>Form to collect user data</h3>
+    <p>
+        a form is defined by the &lt;form&gt; tag.
+        within the form tag, you can add elements
+        to collect user data
+    </p>
+    <h4>The &lt;input&gt; element</h4>
+    <p>
+        Use the input element to display textboxes,
+        checkboxes, radiobuttons, submit button, etc.
+    </p>
+    Example:
+    <p>
+        using the &lt;input&gt;to display a textbox.
+        This tag define the <i>type</i> attribute.
+        Set this attribute to text.
+    </p>
+    <form>
+        <!--Textbox-->
+        First name:
+        <input type="text" name="txtfirstname"
+               id="firstname" size="20" /><br />
+        Last name:
+        <input type="text" name="txtlastname"
+               id="lastname" size="20" /><br />
+        <br />
+        <!--checkboxes-->
+        Select your hobbies:<br />
+        <input type="checkbox" name="chkRunning"
+               id="running" />Running
+        &nbsp;&nbsp;
+        <input type="checkbox" name="chkGaming"
+               id="gaming" />Gaming
+        &nbsp;&nbsp;
+        <input type="checkbox" name="chkSerfing"
+               id="serfing" />serfing
+        &nbsp;&nbsp;
+        <input type="checkbox" name="chkBiking"
+               id="biking" />Biking
+        <br /><br />
+        <!--radiobuttons-->
+        Select your favorite dish:<br />
+        <input type="radio" name="EthnicDishes"
+               id="italian" />Italian <br />
+        <input type="radio" name="EthnicDishes"
+               id="mexican" />Mexican <br />
+        <input type="radio" name="EthnicDishes"
+               id="filipeno" />Filipeno <br />
+
+        <br />
+        <!--textbox for numbers only-->
+        Quantity:
+        <input type="number" name="txtQuantity"
+               id="quantity" size="3" maxlength="3"
+               min="1" max="20"
+               value="10" step="0.1" />
+
+        <br /><br />
+        <!--input of type date-->
+        Enter your birth date:
+        <input type="date" name="txtBirthdate"
+               id="birthdate" max="2016-10-04" />
+        <br /><br />
+        <!--input type=color-->
+        Select your favorite color:
+        <input type="color" name="txtcolor"
+               id="favoritecolor" />
+        <br /><br />
+        <!--Entering comments-->
+        <textarea rows="10" cols="20"
+                  name="commentArea"
+                  id="comments">
+
+        </textarea>
+        <br /><br />
+        <!--dropdown element-->
+        Select a car you like to have but can't<br />
+        <select name="cars" id="expensivecars">
+            <option value="bmw-z3">BMW Z3</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="farari">Farari</option>
+            <option value="lamborgini">Lamborgini</option>
+        </select>
+        <br />
+        <input type="submit" value="Submit your request" />
+    </form>
+</body>
+</html>

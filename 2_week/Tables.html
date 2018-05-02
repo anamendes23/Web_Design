@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h3>Adding a table to an html document</h3>
+	<!-- Use the <table> tag to define a table within the <table> tag define as many <tr> tag (table row) and within the <tr> tag define as many <td> tag (table data) each <td> tag defines a column. in general, the first row uses the <th> tag (for column headings) within each <td> tag you write the text that will appear in a table cell-->
+	<table border="1">
+			<!--defines the first row-->
+		<tr>
+			<!--defines 3 columns (cells) in the first row-->
+			<td>cell 1-1</td>
+			<td>cell 1-2</td>
+			<td>cell 1-3</td>
+		</tr>
+		<!--defines the second row-->
+		<tr>
+			<!--defines 3 columns (cells) in the second row-->
+			<td>cell 2-1</td>
+			<td>cell 2-2</td>
+			<td>cell 2-3</td>
+		</tr>
+		<!--defines the third row-->
+		<tr>
+			<!--defines 3 columns (cells) in the third row-->
+			<td>cell 3-1</td>
+			<td>cell 3-2</td>
+			<td>cell 3-3</td>
+		</tr>		
+	</table>
+
+	<!--second try-->
+	<hr />
+	<p><h2>Span of Column & Row</h2></p>
+	<hr />
+	<div>
+		<h3>Col Span</h3>
+		<p>syntax: &lt;td colspan="number"&gt;here number specifies the number of columns a cell should span.</p>
+		<p>Example: </p>
+		<table border="1">
+			<caption>colspan example</caption>
+			<tr>
+				<th>header1</th>
+				<th>header2</th>
+				<th>header3</th>
+				<th>header4</th>
+			</tr>
+			<tr>
+				<td colspan="2">data 2,1</td>
+				<td>data 2,2</td>
+				<td>data 2,3</td>
+				<td>data 2,4</td>
+			</tr>
+			<tr>
+				<td>data 3,1</td>
+				<td>data 3,2</td>
+				<td>data 3,3</td>
+				<td>data 3,4</td>
+			</tr>
+			<tr>
+				<td colspan="4">data 4,1</td>
+				<td>data 4,2</td>
+				<td>data 4,3</td>
+				<td>data 4,4</td>
+			</tr>
+			<tr>
+				<td>data 5,1</td>
+				<td>data 5,2</td>
+				<td>data 5,3</td>
+				<td>data 5,4</td>
+			</tr>
+		</table>
+	</div>
+	<hr />
+	<div>
+		<h3>Row Span</h3>
+		<p>Syntax: &lt;td rowspan="number"&gt;where <i>number</i> is the number of rows a cell should spam</p>
+		<p>Example: </p>
+		<table border="1">
+			<caption>rowspan example</caption>
+			<tr>
+				<th>header1</th>
+				<th>header2</th>
+				<th>header3</th>
+				<th>header4</th>
+			</tr>
+			<tr>
+				<td rowspan="2">data 2,1</td>
+				<td>data 2,2</td>
+				<td>data 2,3</td>
+				<td rowspan="4">data 2,4</td>
+			</tr>
+			<tr>
+				<td>data 3,2</td>
+				<td>data 3,4</td>
+			</tr>
+			<tr>
+				<td>data 4,1</td>
+				<td>data 4,2</td>
+				<td>data 4,4</td>
+			</tr>
+			<tr>
+				<td>data 5,1</td>
+				<td>data 5,2</td>
+				<td>data 5,4</td>
+			</tr>
+		</table>
+	</div>
+	<hr />
+	<div>
+		<h3>Both rowspan & colspan</h3>
+		<p>You can use rowspan and colspan at the same time in any table. You can apply rowspan and colspan to any &lt;td&gt; tag to expand a call both row wise and column wise.</p>
+		<p>Example: Expand cell data 2,2 to take up six cells (2rows by 3 cols)</p>
+		<table border="1">
+			<caption>rowspan & colspan example</caption>
+			<tr>
+				<th>header1</th>
+				<th>header2</th>
+				<th>header3</th>
+				<th>header4</th>
+			</tr>
+			<tr>
+				<td>data 2,1</td>
+				<td rowspan="2" colspan="3">data 2,2</td>
+			</tr>
+			<tr>
+				<td>data 3,1</td>
+			</tr>
+			<tr>
+				<td>data 4,1</td>
+				<td>data 4,2</td>
+				<td>data 4,3</td>
+				<td>data 4,4</td>
+			</tr>
+			<tr>
+				<td>data 5,1</td>
+				<td>data 5,2</td>
+				<td>data 5,3</td>
+				<td>data 5,4</td>
+			</tr>
+		</table>
+	</div>
+	<!-->inline stylind</!-->
+	<div style="margin: 0 0 20px 20px;">
+		<!-->top, right, bottom, left</!-->
+		<p>Example: </p>
+		<table style="width: 100%; max-width: 100%; border: 3px solid blue; padding: 5px 5px 5px 5px;">
+			<caption style="font-size: x-large;font-weight: bolder;">Inline Table Style</caption>
+			<tr>
+				<th>Heading 1</th>
+				<th style="background-color: #213f51;border-color: black;font-size: xx-large;font-family: Chiller;color: white;text-align: center;">Heading 2</th>
+			</tr>
+			<tr>
+				<td>no style cell</td>
+				<td style="background-color: #653f79;border-bottom-width: 2px;text-align: right;color: white;">styled cell</td>
+			</tr>
+			<tr>
+				<td>boring cell</td>
+				<td style="background-color: #63086d;border-bottom-width: 2px;text-align: center;color: white;">styled 2</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <!--An internal CSS is used to define a style
+        for a single HTML page. An internal CSS is
+        defined in the <head> section of an HTML page,
+        within a <style> element:-->
+    <style>
+        body {
+            background-color: powderblue;
+            font-size: larger;
+            font-family: 'Lucida Sans';
+        }
+
+        div {
+            padding-top: 20px;
+        }
+
+        h3 {
+            color: #000000;
+        }
+
+        p {
+            color: #2b3355;
+        }
+
+        hr {
+            border-style: groove;
+            border-width: 5px;
+        }
+    </style>
+    <title>Links</title>
+</head>
+<body>
+    <div><hr></div>
+    <div>
+        <h2 id="top">Html Links</h2>
+    </div>
+    <article>
+        <section>
+            <div>
+                <div><hr></div>
+                <p>There are three different kinds of links you can add to your web page.</p>
+                <ul>
+                    <li>Links to pages outside the current site. (Global)</li>
+                    <li>Links to other pages withing the current site. (Local)</li>
+                    <li>Links to anchors on the current page.(Internal)</li>
+                </ul>
+                <p>Use the &lt;a&gt; tag to add links to a page.</p>
+                <p> Within the &lt;a&gt; tag, use the href attribute, and set it to a url.</p>
+            </div>
+        </section>
+        <section>
+            <div>
+                <table style="width: 70%;max-width: 100%;border: 1px solid blue;padding: 5px;">
+                    <tr><th colspan="2">The target attribute specifies where to open the linked document.</th></tr>
+                    <tr>
+                        <td style="text-align:right"> _blank </td>
+                        <td>-- Opens the linked document in a new window or tab</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right"> _self  </td>
+                        <td>-- Opens the linked document in the same window/tab as it was clicked (this is default)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right"> _parent  </td>
+                        <td>-- Opens the linked document in the parent frame</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right"> _top  </td>
+                        <td>-- Opens the linked document in the full body of the window</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:right"> framename  </td>
+                        <td>-- Opens the linked document in a named frame</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </article>
+    <article>
+        <section>
+            <div><hr></div>
+            <div>
+                <h3>Global Links</h3>
+                <hr>
+                <ul>
+                    <li><a href="http://www.w3schools.com" target="_blank">W3schools</a></li>
+                    <li><a href="http://www.google.com" target="_self">Google</a></li>
+                    <li><a href="http://www.msn.com">MSN</a></li>
+                </ul>
+            </div>
+            <div><hr></div>
+            <div>
+                <h3>Local Links</h3>
+               <hr>
+                <ul>
+                    <li><a href="../WEEK-1/Headings.html" target="_self">Headings Page</a></li>
+                    <li><a href="../WEEK-1/ListDetailed.html" target="_parent">List Page</a></li>
+                    <li><a href="../WEEK-1/Lists.html" target="_top">Lists</a></li>
+                </ul>
+            </div>
+            <div><hr></div>
+            <div>
+                <h3>Internal Links</h3>
+               <hr>
+                <p style="margin-left:10%;"> &#9856; First define an anchor spot or a bookmark. </p>
+                <p style="margin-left:10%;"> &#9857; Use the id attribute, assign to it a name. </p>
+                <p style="padding-left:20%;"> <i> I did this to the first h3 tag and the id="top". &lt;h3&gt; id="top">Html Links&lt;/h3&gt;</i></p>
+                <p style="margin-left:10%;"> &#9858; Define a link to the anchor spot or bookmark. <a href="#top">Go back to top of the page</a></p>
+            </div>
+        </section>
+    </article>
+</body>
+</html>

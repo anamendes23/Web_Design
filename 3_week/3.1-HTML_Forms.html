@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<link type="image/png" rel="icon" href="nice_cat.png">
+	<meta charset="UTF-8">
+	<meta name="description" content="HTML form assignment" />
+	<meta name="keywords" content="HTML5, CSS, HTML forms" />
+	<meta name="author" content="Ana Carolina de Souza Mendes" />
+	<meta name="instructor" content="Christy Hernandez" />
+	<title>HTML Forms</title>
+</head>
+<body style="font-family: Tahoma; color: white;">
+	<header style="background-color: purple;">
+		<br />
+		<h3 style="text-align: center; font-size: xx-large;">Form to collect user data</h3>
+		<nav align="center" style="font-size: medium; font-weight: bolder;">
+			<ul>
+				<p><a href="#textbox">Textbox</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#checkboxes">Checkboxes</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#numbers">Numbers</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#date">Date</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#color">Color</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#comments">Comments</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#dropdown">Dropdown</a></p>
+			</ul>
+		</nav>
+		<br />
+	</header>
+	<main style="background-color: black;">
+		<br />
+		<article style="margin: 20px 20px 20px 20px;">
+			<section>
+				<p>A form is defined by the &lt;form&gt; tag. Within the form tag, you can add elements to collect user data.</p>
+				<br />
+			</section>
+			<section>
+				<h4 align="center">The &lt;input&gt; element</h4><br />
+				<p>Use the input element to display texboxes, checkboxes, radiobuttons, submit button, etc.</p>
+				Example:
+				<p>Using the &lt;input&gt; to display a textbox. This tag define the <i>type</i> attribute. Set this attribute to text.</p>
+			</section>
+		</article>
+		<hr>
+		<form style="margin: 20px 20px 20px 20px;">	
+			<div id="textbox" style="margin: 20px 20px 20px 20px;">
+				<!--Textbox-->
+				First name:
+				<input type="text" name="txtfirstname" id="firstname" size="20" style="margin: 10px 0 10px 0;"/><br />
+				Last name:
+				<input type="text" name="txtlastname" id="lastname" size="20" /><br />
+			</div>
+			<div id="checkboxes">
+				<!--Checkboxes-->
+				Select your hobbies:<br /><br />
+				<div style="margin: 0 0 0 30px;">
+					<input type="checkbox" name="chkRunning" id="running" />Running&nbsp;&nbsp;
+					<input type="checkbox" name="chkGaming" id="gaming" />Gaming&nbsp;&nbsp;
+					<input type="checkbox" name="chkSurfing" id="surfing" />Surfing&nbsp;&nbsp;
+					<input type="checkbox" name="chkBiking" id="biking" />Biking&nbsp;&nbsp;
+				</div>				
+				<br /><br />
+			</div>
+			<div id="radiobuttons">
+				<!--Radiobuttons-->
+				Select your favorite dish:<br /><br />
+				<input type="radio" name="EthnicDishes" id="italian" style="margin: 0 0 10px 30px;"/>Italian <br />
+				<input type="radio" name="EthnicDishes" id="mexican" style="margin: 0 0 10px 30px;"/>Mexican <br />
+				<input type="radio" name="EthnicDishes" id="filipeno" style="margin: 0 0 10px 30px;"/>Filipeno <br />	
+				<br />
+			</div>
+			<div id="numbers">
+				<!--Textbox for numbers only-->
+				Quantity:
+				<input type="number" name="txtQuantity" id="quantity" size="3" maxlength="3" min="1" max="20" value="10" step="0.1" />
+				<br /><br />
+			</div>
+			<div id="date">
+				<!--Input of type date-->
+				Enter your birth date:
+				<input type="date" name="txtBirthdate" id="birthdate" max="2016-10-04" />
+				<br /><br />
+			</div>
+			<div id="color">
+				<!--Input of type color-->
+				Select your favorite color:
+				<input type="color" name="txtcolor" id="favoritecolor" />
+				<br /><br />
+			</div>
+			<div id="comments">
+				<!--Entering comments-->
+				Enter your comments:<br />
+				<textarea rows="10" cols="20" name="commentArea" id="comments" style="margin: 20px 0 0 30px;"></textarea>
+				<br /><br />
+			</div>
+			<div id="dropdown">
+				<!--Dropdown element-->
+				Select a car you like to have but can't:&nbsp;&nbsp;
+				<select name="cars" id="expensivecars">
+					<option value="bmw-z3">BMW Z3</option>
+					<option value="mercedes">Mercedes</option>
+					<option value="ferari">Ferari</option>
+					<option value="lamborgini">Lamborgini</option>
+				</select>
+				<br /><br /><hr><br />			
+			</div>
+			<div align="center">
+				<input type="submit" value="Submit your request"/>
+			</div>
+		</form>
+		<br />
+	</main>
+	<footer style="background-color: purple; text-align: center; font-weight: bolder; font-size: medium;">
+		<div>
+			<br />
+			<p>&copy; MereCat 2018</p>
+			<br />
+		</div>
+	</footer>
+</body>
+</html>

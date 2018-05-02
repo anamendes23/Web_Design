@@ -1,0 +1,48 @@
+Query a database and display the results in a table or form using HTML and CSS:
+	https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
+	https://developer.mozilla.org/en-US/docs/Learn/Server-side
+	https://developers.google.com/web/tools/workbox/guides/get-started
+CSS transitions:
+	https://www.w3.org/TR/css-animations-1/
+	https://www.w3.org/TR/css-animations-1/#property-index
+	http://www.williammalone.com/articles/create-html5-canvas-javascript-sprite-animation/
+Multimedia:
+	https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding
+CSS flexboxes:
+	https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction
+	https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox
+image sprites in CSS:
+	https://alistapart.com/article/sprites
+	http://www.williammalone.com/articles/create-html5-canvas-javascript-sprite-animation/
+accessible for mobile:
+	https://developer.mozilla.org/en-US/Apps/Progressive/Responsive/Mobile_first
+	https://developer.mozilla.org/en-US/Apps/Progressive/Responsive/responsive_design_building_blocks
+	https://developer.mozilla.org/en-US/docs/Web/Guide/Mobile
+	https://developer.mozilla.org/en-US/docs/Learn/Accessibility
+	https://developers.google.com/web/tools/chrome-devtools/
+receive messages from the HTML5 WebSocket API & use JQuery to make an AJAX call:
+	https://www.xul.fr/en/html5/websocket.php
+	https://www.xul.fr/en-xml-ajax.html
+	https://developers.google.com/web/tools/workbox/guides/get-started
+animation:
+	https://www.w3.org/TR/css-animations-1/
+	https://www.w3.org/TR/css-animations-1/#property-index
+	http://www.williammalone.com/articles/create-html5-canvas-javascript-sprite-animation/
+pseudo-elements
+	https://css-tricks.com/pseudo-element-roundup/
+
+
+Book with every thing you can think of for the web: 
+https://github.com/Mallioch/MobileMvcSamples (Links to an external site.)Links to an external site.
+
+Google tools for web development: 
+https://developers.google.com/web/tools/ 
+
+Free course on how to use the Google tools: 
+https://www.udemy.com/devtools-2017-the-basics-of-chrome-developer-tools/
+
+Microsoft Virtual Academy for HTML5: 
+https://mva.microsoft.com/search/SearchResults.aspx#!q=HTML5&index=2&lang=1033
+
+Mozilla web development tutorials and best practices: 
+https://developer.mozilla.org/en-US/docs/Learn

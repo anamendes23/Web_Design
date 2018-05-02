@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F556359D-0427-4C9F-BF74-3CFCB9383E07}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IntroToHtml</RootNamespace>
+    <AssemblyName>IntroToHtml</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="1Basics\Headings.html" />
+    <Content Include="1Basics\ListDetailed.html" />
+    <Content Include="1Basics\Lists.html" />
+    <Content Include="2TblsLinks\AssignmentTables.htm" />
+    <Content Include="2TblsLinks\BasicTable.html" />
+    <Content Include="3Forms\Forms.html" />
+    <Content Include="2TblsLinks\Images.html" />
+    <Content Include="2TblsLinks\Links.html" />
+    <Content Include="2TblsLinks\tablerowcolspan.html" />
+    <Content Include="Images\10cents.png" />
+    <Content Include="Images\25cents.png" />
+    <Content Include="Images\50cents.png" />
+    <Content Include="Images\5cents.png" />
+    <Content Include="Images\Ace_Spades.jpg" />
+    <Content Include="Images\AppleCalories.bmp" />
+    <Content Include="Images\Backface_Blue.jpg" />
+    <Content Include="Images\BananaCalories.bmp" />
+    <Content Include="Images\Cat.jpg" />
+    <Content Include="Images\Finland.bmp" />
+    <Content Include="Images\Five.bmp" />
+    <Content Include="Images\Four.bmp" />
+    <Content Include="Images\France.bmp" />
+    <Content Include="Images\Germany.bmp" />
+    <Content Include="Images\One.bmp" />
+    <Content Include="Images\OrangeCalories.bmp" />
+    <Content Include="Images\Orion.bmp" />
+    <Content Include="Images\PearCalories.bmp" />
+    <Content Include="_Layout.html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

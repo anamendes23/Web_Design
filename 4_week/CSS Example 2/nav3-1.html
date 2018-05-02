@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <!--<link href="css/responsive.css" rel="stylesheet" />-->
+    <title></title>
+</head>
+<body>
+    <nav>
+        <div class="container marg50">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+                  <h2></h2>
+
+                    <ul class="nav nav-pills">
+                        <li class="active">
+                            <a href="#proj-pills" data-toggle="tab">Projects</a>
+                        </li>
+                        <li class="">
+                            <a href="#exp-pills" data-toggle="tab">Experience</a>
+                        </li>
+                        <li class="">
+                            <a href="#hob-pills" data-toggle="tab">Hobbys</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div class="tab-pane fade" id="proj-pills">
+                            <h4>Project Tab</h4>
+
+                            <p>@Html.ActionLink("Movies & Books", "MovieBookImages", "Home")</p>
+                            <p>@Html.ActionLink("Midterm", "Index", "Midterm")</p>
+                        </div>
+                        <div class="tab-pane fade active in" id="exp-pills">
+                            <h4>Experience Tab</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                        <div class="tab-pane fade" id="hob-pills">
+                            <h4>Hobbys Tab</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+
+                    </div>
+                    <!--PILL TABS END-->
+                </div>
+
+            </div>
+            <!-- ROW END -->
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <br />
+                    <h4>Customize This Section</h4>
+                </div>
+            </div>
+            <!-- ROW END -->
+        </div>
+    </nav>
+    <!-- CONATINER END -->
+    <!-- REQUIRED SCRIPTS FILES -->
+    <!-- CORE JQUERY FILE -->
+    <script src="Scripts/jquery-3.1.1.js"></script>
+    <!-- REQUIRED BOOTSTRAP SCRIPTS -->
+    <script src="Scripts/bootstrap.js"></script>
+</body>
+</html>
