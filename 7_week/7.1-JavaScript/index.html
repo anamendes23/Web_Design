@@ -7,24 +7,69 @@
 	<meta name="author" content="Ana Carolina de Souza Mendes" />
 	<meta name="instructor" content="Christy Hernandez" />
 	<title>Tip Calculator</title>
+	<link rel="stylesheet" href="mystyle.css">
+	<!-- <script src="code.js"></script> -->
+	<script>
+		//variables
+		var bill;
+		var tipPercentage;
+		var output;
+		var button;
+		//functions
+		function Initialize() {
+			bill = document.getElementById("bill");
+			tipPercentage = document.getElementById("tip");
+			output = document.getElementById("totalTip");
+			output.style.display = "none";
+		}
+
+		function tipCalculator() {
+			var totalBill;
+			//validation
+			if(bill === null)
+			{
+				alert("Please enter your bill.");
+			}
+			if(tipPercentage === null)
+			{
+				alert("Please enter tip percentage.");
+			}
+			else
+			{
+				totalBill = Number.parseFloat(bill.value)*(1 + Number.parseFloat(tipPercentage.value));
+				totalBill = totalBill.toFixed(2);
+				output.style.display = "block";
+				document.getElementById("total").innerHTML = "$" + totalBill;
+			}			
+		}
+	</script>
 </head>
-<body>
-	<!-- FORM -->
-	<form>
-		<div id="textbox">
-			Bill
-			<input type="text" name="txtBill" id="bill">
-			<br /><br />
-		</div>
-		<div id="tipPercentage">
-			Tip Percentage
-			<input type="text" name="txtTip" id="tip">
-			<br /><br />
-		</div>
-		<div id="submit">
-			<input type="submit" value="Calculate your total">
-		</div>
-	</form>
-	<script src="code.js"></script>
+<body onload="Initialize()">
+	<!-- calculator -->
+	<div id="container">
+		<!-- calculator header -->
+		<div id="header">TOTAL BILL CALCULATOR</div>
+		<!-- calculator body -->
+		<div id="calculatorBody">
+			<p>Enter your bill:</p>
+			$<input type="text" name="txtBill" id="bill">
+			<p>Select Tip Percentage:</p>
+			<select name="tipPercentage" id="tip">
+				<option disabled="select" selected value="0">Choose Tip</option>
+				<option value="0.3">30&#37; &#45; Outstanding</option>
+				<option value="0.2">20&#37; &#45; Good</option>
+				<option value="0.15">15&#37; &#45; Ok</option>
+				<option value="0.1">10&#37; &#45; Bad</option>
+				<option value="0.05">5&#37; &#45; Terrible</option>
+			</select>
+			<br />
+			<button id="calculate" onclick="tipCalculator()">Calculate</button>
+		</div>		
+		<!--calculator end-->
+	  	<div id="totalTip">
+			<h4>Your total with tip is: </h4>
+		    <h3 id="total">$ 0.00</</h3>>
+	  	</div>
+	</div>	
 </body>
 </html>

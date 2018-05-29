@@ -1,26 +1,34 @@
 //variables
-var bill = Number.parseFloat(document.getElementById("bill").value);
-var tipPercentage = Number.parseFloat(document.getElementById("bill").value);
-submitOK = "true";
-//validation
-if(bill == null)
-{
-	alert("Please enter your bill.");
-	submitOK = "false";
-}
-if(tipPercentage == null)
-{
-	alert("Please enter tip perentage.");
-	submitOK = "false";
-}
-if(submitOK == "false")
-{
-	return false;
-}
-//function
-function tipCalculator(bill, tipPercentage) {
-	var totalBill = bill*(1+tipPercentage);
-	return Number.parseFloat(totalBill).toFixed(2);
+var bill;
+var tipPercentage;
+var output;
+var button;
+//functions
+function Initialize() {
+	bill = document.getElementById("bill").value;
+	tipPercentage = document.getElementById("tip").value;
+	output = document.getElementById("totalTip");
+	output.style.display = "none";
 }
 
-document.write('Your total bill, with tip, is $' + tipCalculator);
+function tipCalculator() {
+	var totalBill;
+	//validation
+	if(bill === null)
+	{
+		alert("Please enter your bill.");
+	}
+	else if(tipPercentage === null)
+	{
+		alert("Please enter tip percentage.");
+	}
+	else
+	{
+		totalBill = Number.parseFloat(bill)*(1 + Number.parseFloat(tipPercentage));
+		totalBill = totalBill.toFixed(2);
+		output.innerHTML = totalBill;
+	}			
+}
+
+//click to call function
+document.getElementById("calculate").onclick = function() {tipCalculator()};

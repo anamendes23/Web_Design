@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script>
+        //create an array of names
+        var names = ["James", "Jones", "Michelle", "Robert", "Tim"];
+        var randomNumbers = [];
+
+        var input;
+        var output;
+        var inputIndex;
+
+        function initialize() {
+            input = document.getElementById("txtname");
+            inputIndex = document.getElementById("txtindex");
+            output = document.getElementById("displayarea");
+        }
+        function AddNameToBeginning() {
+            //get the name from the textbox. Use the value property of the textbox
+            var name = input.value;
+            //add it to the names array
+            if (name != "")
+                names.unshift(name);
+            //display the current array
+            DisplayNames();
+        }
+        function AddNameToEndOfArray() {
+            //get the name from the textbox. Use the value property of the textbox
+            var name = input.value;
+            //add it to the names array
+            if (name != "")
+                names.push(name);
+            //display the current array
+            DisplayNames();
+        }
+        function RemoveFirstName() {
+            names.shift();//removes the first name
+            DisplayNames();
+        }
+        function RemoveLastName() {
+            names.pop(); //removes the last name
+            DisplayNames();
+        }
+        function DisplayNames() {
+            //clear display
+            output.innerHTML = "";
+            for (var i = 0; i < names.length; i++) {
+                output.innerHTML += names[i] + "<br />";
+            }
+        }
+        function Search() {
+            //use the indexOf method to search for an item within an array
+            //the indexOf return the index of the searched item, or =1 if not found
+
+            //get name
+            var name = input.value;
+            var index = names.indexOf(name);
+            if (index >= 0)
+                output.innerHTML = name + " was found at index " + index;
+            else
+                output.innerHTML = name + " was not found in the array names";
+        }
+
+        function DisplayRandomNumbers() {
+            //clear display
+            output.innerHTML = "";
+            for (var i = 0; i < randomNumbers.length; i++) {
+                output.innerHTML += randomNumbers[i] + "<br/>";
+            }
+        }
+
+        function GetRandomValue(){
+            //get random() method number
+            var num = Math.ceil(Math.random(0,1)*100);
+            randomNumbers.push(num);
+            DisplayRandomNumbers();
+        }
+
+        function RemoveLastValue(){
+            randomNumbers.pop();
+            DisplayRandomNumbers();
+        }
+
+        function ComputeAverage() {
+            output.innerHTML = "";
+            var sum = 0;
+            var counter = 0;
+            for (var i = 0; i < randomNumbers.length; i++) {
+                sum += randomNumbers[i];
+                counter++;
+            }
+            var average = sum/counter;
+            output.innerHTML = "The average is " + average;
+        }
+
+        function DisplayMinMax() {
+            output.innerHTML = "";
+            var min = Math.min.apply(null, randomNumbers);
+            var max = Math.max.apply(null, randomNumbers);
+            output.innerHTML = "The max number is " + max + " and the min number is " + min;
+        }
+
+        function InsertValueToIndex() {
+            var index = Number.parseFloat(inputIndex.value);
+            var num = Math.ceil(Math.random(0,1)*100);
+            if (index < 0)
+                alert("Index must be greater than or equal to 0");
+            else if (index > randomNumbers.length)
+                alert("Index must be less than " + randomNumbers.length);
+            else
+                randomNumbers.splice(index, 0, num);
+            DisplayRandomNumbers();
+        }
+
+
+    </script>
+</head>
+<body onload="initialize();">
+    <h2>Introduction to Javascript Arrays</h2>
+    <p>
+    Syntax:<br />
+    <i>var array-name = [item1,item2,item3,....]</i>
+    </p>
+    <p>
+    <b>Example:</b><br />
+    var grades = [90,82, 77,89,97]; <br />
+    var names = ["James","Jones","Michelle","Robert","Tim"];<br />
+    array has a property length in addition to a list of methods. 
+    See javascript array reference.
+    </p>
+    <a href="http://www.w3schools.com/jsref/jsref_obj_array.asp">array reference</a>
+
+    <div>
+        Enter name to add: <input type="text" id="txtname" size="25" /><br /><br />
+        Enter index to add random number: <input type="text" id="txtindex" size="9" /><br /><br />
+        <button onclick="AddNameToBeginning()">Add name to beginning of the array</button>
+        <br /><br />
+        <button onclick="AddNameToEndOfArray()">Add name to end of the array</button>
+        <button onclick="RemoveFirstName()">Remove first name in the array</button>
+        <button onclick="RemoveLastName()">Remove last name in the array</button>
+        <button onclick="DisplayNames()">Display the array</button>
+        <button onclick="Search()">Search for a name in the array</button>
+        <br /><br />
+        <button onclick="DisplayRandomNumbers()">Display Random</button>
+        <button onclick="GetRandomValue()">Random Value</button>
+        <button onclick="RemoveLastValue()">Remove Last Value</button>
+        <button onclick="ComputeAverage()">Compute Average</button>
+        <button onclick="DisplayMinMax()">Display Min and Max</button>
+        <button onclick="InsertValueToIndex()">Insert value to index</button>
+    </div>
+    <p id="displayarea"></p>
+</body>
+</html>
