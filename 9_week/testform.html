@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Test input</title>
+  <script LANGUAGE="JavaScript">
+    function readText (form) {
+      var TestVar = form.inputbox.value;
+      alert ("You typed: " + TestVar);
+    }
+
+    function writeText(form) {
+      form.inputbox.value = "Have wonderful day!"
+    }
+    function testButton (form){
+      for (Count = 0; Count < 3; Count++)
+      {
+        if (form.rad[Count].checked)
+        break;
+      }
+      alert ("Button " + Count + " is selected");
+    }
+
+    function testCheck (form){
+      alert (form.check1.checked);
+    }
+    form.check1.checked = true; //sets first checkbox to checked
+
+    function seeTextArea (form) {
+    alert (form.myarea.value);
+    }
+    function bodyLoad() {
+      myform.myarea.value = "Text goes here";
+      form.rad[0].checked = true;  // sets to first button in the rad group
+    }
+
+    function testSelect(form) {
+      //alert (form.list.selectedIndex);
+      Item = form.list.selectedIndex;
+      Result = form.list.options[Item].text;
+      alert (Result);
+    }
+    //Other triggers
+    // onFocus -- an event is triggered with a form object gets input focus
+      //(the insertion point is clicked there).
+    // onBlur -- an event is triggered with a form object loses input focus
+      //(the insertion point is clicked out of there).
+    // onChange -- an event is triggered when a new item is selected in a list box.
+      //This event is also trigged with a text or text area box loses focus and the contents of the box has changed.
+    // onSelect -- an event is triggered when text in a text or text area box is selected.
+    // onSubmit -- an event is triggered when the form is submitted to the server
+      //(more about this important hander later in the column).
+
+    function mailMe(form){
+      Subject=document.myform.inputbox1.value;
+      CC= document.myform.inputbox2.value;
+      BCC= document.myform.inputbox3.value;
+      location = "mailto:jwedit@javaworld.com?subject="+Subject+"&Bcc="+BCC+"&cc="+CC;
+      return true;
+    }
+    function mailMeMethod(form){
+      Subject=document.myform.inputbox1.value
+      CC= document.myform.inputbox2.value
+      BCC= document.myform.inputbox3.value
+      location = "/javaworld/cgi-bin/jw-mailto.cgi?jwedit@javaworld.com?subject="+Subject+"&Bcc="+BCC+"&cc="+CC
+      document.myform.submit();
+    }
+
+    function testResults (form) {
+      TestVar = isNumberString (form.crazy.value)
+      if (TestVar == true)
+        alert ("Congratulations! You entered only numbers");
+      if (TestVar == false)
+        alert ("Boo! You entered a string with non-numbers characters");
+    }
+
+    function isNumberString (InString)  {
+      if(InString.length == 0) {
+        alert ("Please enter something");
+        return (null);
+      }
+      var RefString="1234567890";
+      for (Count=0; Count < InString.length; Count++)  {
+        TempChar = InString.substring (Count, Count+1);
+        if (RefString.indexOf (TempChar, 0)==-1)
+          return (false);
+        else {
+          return (true);
+        }
+      }
+    }
+  </script>
+</head>
+<body onload="bodyLoad()">
+  <form NAME="myform" ACTION="" METHOD="GET" onSubmit="return mailMe(this.form)">
+    Enter something in the box: <br>
+    <input TYPE="text" NAME="inputbox" VALUE=""><p>
+    <input TYPE="button" NAME="button1" Value="Read" onClick="readText(this.form)">
+    <input TYPE="button" NAME="button2" Value="Write" onClick="writeText(this.form)">
+    <p>Select Something</p>
+    <INPUT TYPE="radio" NAME="rad" Value="rad_button1" checked onClick=0><BR>
+    <INPUT TYPE="radio" NAME="rad" Value="rad_button2" onClick=0><BR>
+    <INPUT TYPE="radio" NAME="rad" Value="rad_button3" onClick=0><BR>
+    <INPUT TYPE="button" NAME="button" Value="Click" onClick="testButton(this.form)"> <BR>
+    <p>Is Check1 Selected?</p>
+    <INPUT TYPE="checkbox" NAME="check1" Value="Check1" checked>Checkbox 1<BR>
+    <INPUT TYPE="checkbox" NAME="check2" Value="Check2">Checkbox 2<BR>
+    <INPUT TYPE="checkbox" NAME="check3" Value="Check3">Checkbox 3<BR>
+    <INPUT TYPE="button" NAME="button" Value="Check" onClick="testCheck(this.form)"><BR>
+    <p>Write something</p>
+    <TEXTAREA NAME="myarea" COLS="40" ROWS="5">Test text area</TEXTAREA><br>
+    <INPUT TYPE="button" NAME="button3" Value="Test" onClick="seeTextArea(this.form)">
+    <p>Selec Something</p>
+    <SELECT NAME="list" SIZE="3">
+      <OPTION>This is item 1
+      <OPTION>This is item 2
+      <OPTION>This is item 3
+    </SELECT><br>
+    <INPUT TYPE="button" NAME="button" Value="Test" onClick="testSelect(this.form)">
+    <p>Subject of message:</p>
+    <INPUT TYPE="text" NAME="inputbox1" VALUE="This is such a great form!" SIZE=50>
+    <P>Send cc to: <BR>
+    <INPUT TYPE="text" NAME="inputbox2" VALUE="" SIZE=50>
+    <P>Send blind cc to: <BR>
+    <INPUT TYPE="text" NAME="inputbox3" VALUE="" SIZE=50><P>
+    <INPUT TYPE="submit"><BR>
+    <INPUT TYPE="button" VALUE="Send Mail" onClick="mailMeMethod()"><BR>
+    Enter a string with numbers only:
+    <INPUT TYPE="text" NAME="crazy" VALUE="">
+    <INPUT TYPE="button" NAME="button" Value="Click" onClick="testResults(this.form)" >
+  </form>
+</body>
+</html>

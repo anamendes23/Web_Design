@@ -1,0 +1,119 @@
+  <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="description" content="JavaScript and Forms assignment" />
+    <meta name="keywords" content="JavaScript, Forms" />
+    <meta name="author" content="Ana Carolina de Souza Mendes" />
+    <meta name="instructor" content="Christy Hernandez" />
+    <title>Grabbing Form Data to Display on Page</title>
+    <style>
+    body { margin: 0; padding: 25px; border-top: 2px solid red; font-size: 100%;}
+    p { text-align: center;}
+    fieldset {margin-top: 10px;}
+    table {font-size: smaller; border-collapse: collapse; width: 100%;}
+    th { border: 1px solid black;}
+    tr#firstRow th {font-weight: normal; background: #D3D3D3;}
+    tr#thirdRow th {background: #F5F5F5;}
+    input#button:hover {border-color: #1F7CAC;}
+    </style>
+  </head>
+  <body>
+    <form name="survey">
+      <fieldset>
+        <legend>Market Research Survey</legend>
+        <p>Please take a few moments to complete this satisfaction survey.</p>
+        <fieldset>
+          <legend>What is your age range?</legend>
+          <select name="age" id="age">
+    				<option selected value="18-25">18-25</option>
+    				<option value="26-30">26-30</option>
+    				<option value="31-40">31-40</option>
+    				<option value="41-50">41-50</option>
+    				<option value="51-60">51-60</option>
+    				<option value="61-70">61-70</option>
+            <option value="71-ol">71-older</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend>What is your yearly income range?</legend>
+          <select name="income" id="income">
+            <option selected value="$0-$25,000">$0-$25,000</option>
+    				<option value="$25,000-$34,999">25,000-$34,999</option>
+            <option value="$35,000-$49,999">35,000-$49,999</option>
+    				<option value="$50,000-$74,999">50,000-$74,999</option>
+    				<option value="$75,000-$99,999">75,000-$99,999</option>
+    				<option value="$100,000-$149,999">100,000-$149,999</option>
+            <option value="$150,000-$199,999">150,000-$199,999</option>
+            <option value="$150,000-$199,999">150,000-$199,999</option>
+            <option value="$200,000-more"><$200,000-more</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend>Which of the following products have you purchased in the last 2 months.
+            Please check all that apply.</legend>
+          <input type="checkbox" name="Product1" value="Product1">Product 1<br>
+          <input type="checkbox" name="Product2" value="Product2">Product 2<br>
+          <input type="checkbox" name="Product3" value="Product3">Product 3<br>
+        </fieldset>
+        <fieldset>
+          <legend>How often would you use our new product?</legend>
+          <input type="radio" name="rad" value="Weekly" onclick=0>Daily<br>
+          <input type="radio" name="rad" value="Daily" checked onclick=0>Weekly<br>
+          <input type="radio" name="rad" value="Monthly" onclick=0>Monthly<br>
+        </fieldset>
+        <fieldset>
+          <legend>How much would you pay for the new product?</legend>
+          $<input type="text" name="price" value="">
+        </fieldset>
+        <fieldset>
+          <legend>What features would you like to see in the new product?</legend>
+          <textarea name="features" rows="8" cols="80"></textarea>
+        </fieldset>
+        <fieldset>
+          <table>
+            <legend>Please rate your level of agreement with the following statements.</legend>
+            <tr id="firstRow">
+              <th></th>
+              <th>Strongly Disagree</th>
+              <th>Disagree</th>
+              <th>Agree</th>
+              <th>Strongly Agree</th>
+            </tr>
+            <tr id="secondRow">
+              <th>Our products are priced fairly.</th>
+              <th><input type="radio" name="radPrice" value="Strongly Disagree"></th>
+              <th><input type="radio" name="radPrice" value="Disagree"></th>
+              <th><input type="radio" name="radPrice" value="Agree"></th>
+              <th><input type="radio" name="radPrice" value="Strongly Agree"></th>
+            </tr>
+            <tr id="thirdRow">
+              <th>Our products are high quality.</th>
+              <th><input type="radio" name="radQuality" value="Strongly Disagree"></th>
+              <th><input type="radio" name="radQuality" value="Disagree"></th>
+              <th><input type="radio" name="radQuality" value="Agree"></th>
+              <th><input type="radio" name="radQuality" value="Strongly Agree"></th>
+            </tr>
+            <tr id="fourthRow">
+              <th>You would recommend our product to a friend or coworker.</th>
+              <th><input type="radio" name="radRecommend" value="Strongly Disagree"></th>
+              <th><input type="radio" name="radRecommend" value="Disagree"></th>
+              <th><input type="radio" name="radRecommend" value="Agree"></th>
+              <th><input type="radio" name="radRecommend" value="Strongly Agree"></th>
+            </tr>
+          </table>
+        </fieldset>
+        <br>
+        <input type="button" name="submit" id="button" value="Submit" onclick="SubmitForm(this.form)">
+      </fieldset>
+    </form>
+    <script>
+      function SubmitForm(form){        
+        var suggestions = form.features.value;
+        alert ("Thank you for answering our survey!\nYour opinion is very important to us.\n"+
+                "We will carefully review the following suggestion(s):\n" +
+                '"' + suggestions + '"\n'+
+                "We are excited to pass this valuable information on to the product development team.");
+      }
+    </script>
+  </body>
+</html>
