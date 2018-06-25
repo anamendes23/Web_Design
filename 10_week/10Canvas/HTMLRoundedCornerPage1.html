@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            box-shadow: 20px 20px 80px black;
+        }
+
+        #div1 {
+            width: 200px;
+            height: 200px;
+            border: 3px solid blue;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        #div2 {
+            width: 200px;
+            height: 200px;
+            border: 3px solid red;
+            text-align: center;
+            border-radius: 10px 15px 40px 50px;
+        }
+
+        #para1 {
+            background-color: rgba(255,0,0,0.2);
+        }
+
+        #para2 {
+            background-color: rgba(255,0,0,0.4);
+        }
+
+        #para3 {
+            background-color: rgba(255,0,0,0.6);
+        }
+
+        #para4 {
+            background-color: rgba(255,0,0,0.8);
+        }
+
+        #para5 {
+            background-color: rgba(255,0,0,1);
+        }
+
+        #div3 {
+            background: red; /*for browsers that do not support gradients*/
+            background: -o-repeating-linear-gradient(left,red,yellow); /*for Safori 5.1 to 6*/
+            background: -moz-linear-gradient(right,red,yellow); /*for firefox 3.6 to 15*/
+            background: -o-linear-gradient(right,red,yellow); /*for opera 11.1 to 12.0  */
+            background: linear-gradient(to right,red,yellow); /*standart syntax*/
+            text-align: center;
+        }
+
+        h2 {
+            font-weight: bolder;
+            font-size: 40px;
+            color: wheat;
+            text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
+        }
+
+        h3 {
+            text-decoration-style: dotted;
+        }
+
+        #box {
+            width: 200px;
+            height: 200px;
+            background: -o-repeating-linear-gradient(left,blue,yellow); /*for Safori 5.1 to 6*/
+            background: -moz-linear-gradient(right,blue,yellow); /*for firefox 3.6 to 15*/
+            background: -o-linear-gradient(right,blue,yellow); /*for opera 11.1 to 12.0  */
+            background: linear-gradient(to right,blue,yellow); /*standart syntax*/
+            border-radius: 20px 20px 20px 20px;
+            position: absolute;
+            left: 40%;
+            top: 50%;
+        }
+
+        #div4 {
+            width: 400px;
+            background: red; /*for browsers that do not support gradients*/
+            background: -webkit-linear-gradient(left,red,orange,yellow,green,indigo,violet); /*for safari*/
+            background: -o-linear-gradient(left,red,orange,yellow,green,indigo,violet); /*for firefox 3.6 to 15*/
+            background: -moz-linear-gradient(left,red,orange,yellow,green,indigo,violet); /*for opera 11.1 to 12.0  */
+            background: linear-gradient(to right,red,orange,yellow,green,indigo,viole); /*standart syntax*/
+        }
+    </style>
+</head>
+<body>
+    <h2>Rounded couners for an element with a border</h2>
+    <p>Use the property border-radius to set all four corners of a box</p>
+    <p>
+        you may choose to focus on a specific corner by using:<br />
+        border-top-left-radius<br />
+        torder-top-right-radius<br />
+        border-bottom-right-radius<br />
+        border-bottom-left-radius
+    </p>
+    Exemple<br />
+    <div id="div1">
+        div1 with rounded corner
+    </div>
+    <br /><br />
+    <div id="div2">div2 with rounded corners set to different values</div>
+    <h2>Using rgba to describe color</h2>
+    <p>r: red; g: green; b: blue; a: alpha (define transparency, opacity)</p>
+    <p>
+        red,green,and blue take on a value from 0 to 255<br />
+        alpha is assigned a value from 0 to 1
+    </p>
+    <p id="para1">Red with 0.2 opacity</p>
+    <p id="para2">Red with 0.4 opacity</p>
+    <p id="para3">Red with 0.6 opacity</p>
+    <p id="para4">Red with 0.8 opacity</p>
+    <p id="para5">Red with 1 opacity</p>
+
+    <h2>Gradient Color</h2>
+    <p>
+        Gradients let you display smooth transitions between two or more
+        specified colors
+    </p>
+    <h3>Linear Gradients</h3>
+    <p>Goes down, up, left, right, diagonally</p>
+    <p>
+        syntax: linear-gradient(directio,color-stop1,color-stop2,...);
+
+    </p>
+
+    Example: left to right linear dradient<br />
+    <br /><br />
+    <div id="div3">Linear Gradient</div>
+    <br />
+    <div id="box">
+
+    </div>
+    <br />
+    <h3>Using multiple gradient colors</h3>
+    <div id="div4" style="font-size:40px;font-weight:bolder">
+        Multi-Color gradient Background
+    </div>
+</body>
+</html>
+<!--
+    Midterm for web: on Tuesday May 10th
+    Midterm for C#: on Monday May 9th
+
+    Lab due Wednesday May 4th.
+
+    set up a p or div tag backgroung to linear gradient using the
+    rgba to set the color.Set same color but different alpha
+
+    likewist with multi color gradient, use rgba by setting same color
+    and just changign the alpha value.
+    -->

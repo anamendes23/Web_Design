@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        var canvas;//reference to the canvas element
+        var ctx; //similar to the graphics object
+
+        function initialize() {
+            canvas = document.getElementById("myCanvas");
+            ctx = canvas.getContext("2d");
+        }
+
+        function drawLine() {
+            //2 points to draw a line
+            //the first points is set with the moveTo method
+            //the second points is by using the lineTo method
+            ctx.beginPath();
+            ctx.moveTo(getRandomX(), getRandomY());
+            ctx.lineTo(getRandomX(), getRandomY());
+            ctx.strokeStyle = get_random_color();
+            ctx.lineWidth = 1 + Math.floor(Math.random() * 7);
+            ctx.stroke();
+
+        }
+        //-------------------------------------
+        function drawCircle() {
+            //provide x,y coordinate of the circle
+            //provide radius
+            //provide starting and ending angles in radians
+            //optional true:counterclockwise or false:cloakwise
+            //ctx.arc(x,y,r,sAngle,eAngle,counterclockwise)
+            ctx.beginPath();//start new path
+            ctx.arc(170, 125, 70, 0, 2 * Math.PI, true);
+            ctx.strokeStyle = get_random_color();
+            ctx.lineWidth = 1 + Math.floor(Math.random() * 7);
+            ctx.stroke();
+        }
+        //--------------------------------------
+        function drawRectangle() {
+            //use ctx.rect(x,y,width,height)
+            ctx.beginPath();
+            ctx.rect(50, 30, 100, 75);
+            ctx.strokeStyle = get_random_color();
+            ctx.lineWidth = 1 + Math.floor(Math.random() * 7);
+            ctx.stroke();
+        }
+        //------------------------------------------
+        function FillRectangle() {
+            ctx.beginPath();
+            ctx.fillStyle = get_random_color();
+            ctx.fillRect(40, 100, 70, 45);
+        }
+        //--------------------------------
+        function drawText() {
+            ctx.beginPath();
+            ctx.font = "20px Arial";
+            ctx.fillText("Drawing Text", 10, 20);
+        }
+        //
+        function strokeText() {
+            ctx.beginPath();
+            ctx.font = "30px Arial";
+            ctx.strokeText("Stroking Text", 10, 100);
+        }
+        //-------------------------------------------
+        function drawImage() {
+            var img = new Image(); //create an image object
+            img.src = "Cat.jpg";//specify the location of the image
+            ctx.drawImage(img, 100, 20);//draw image at location 100,20
+
+        }
+        //----------------------
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+        //=====================================================
+        function getRandomX() {
+            var r = Math.floor(Math.random() * canvas.width);
+            return r;
+        }
+        function getRandomY() {
+            var r = Math.floor(Math.random() * canvas.height);
+            return r;
+        }
+
+        function get_random_color() {
+            function c() {
+                return Math.floor(Math.random() * 256).toString(16)
+            }
+            return "#" + c() + c() + c();
+        }
+    </script>
+</head>
+<body onload="initialize();">
+
+    <canvas id="myCanvas" width="350" height="200"
+            style="border:1px solid #0026ff; background-color:darkgrey">
+
+    </canvas>
+    <br />
+    <hr />
+    <br />
+    <button onclick="drawLine();">Draw a random line</button>
+    <br />
+    <button onclick="drawCircle();">Draw a random circle</button>
+    <br />
+    <button onclick="drawRectangle();">Draw a random rectangle</button>
+    <br />
+    <button onclick="drawText();">Draw Text</button>
+    <br />
+    <button onclick="strokeText();">Stroke Text</button>
+    <br />
+    <button onclick="drawImage();">Draw Image From File</button>
+    <br />
+    <button onclick="FillRectangle();">Fill Rectangle</button>
+
+    <br />
+    <button onclick="clearCanvas();">Clear Canvas</button>
+
+</body>
+</html>
+<!--
+    Lab Assignment
+    Draw a smiley face or house with grass in canvas using javascript
+-->

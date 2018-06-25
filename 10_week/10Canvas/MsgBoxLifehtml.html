@@ -1,0 +1,581 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #animation1 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            position: relative;
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 0s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 0s;
+            animation-iteration-count: infinite;
+        }
+        /* Chrome, Safari, Opera */
+        @-webkit-keyframes example {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 550px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 550px;
+                top: 210px;
+            }
+
+            75% {
+                background-color: green;
+                left: -10px;
+                top: 210px;
+            }
+
+            100% {
+                background-color: red;
+                left: -10px;
+                top: 0px;
+            }
+        }
+        /* Standard syntax */
+        @keyframes example {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 550px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 550px;
+                top: 210px;
+            }
+
+            75% {
+                background-color: green;
+                left: -10px;
+                top: 210px;
+            }
+
+            100% {
+                background-color: red;
+                left: -10px;
+                top: 0px;
+            }
+        }
+
+        #animation2 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        #animation3 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 3s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        #animation4 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+
+        #animation5 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 5s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+        #animation6 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 6s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+        }
+
+        #animation7 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 7s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+        }
+
+        #animation8 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 8s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+        }
+
+        #animation9 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 9s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 9s;
+            animation-iteration-count: infinite;
+        }
+
+        #animation10 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 10s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+
+        #animation11 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 11s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 11s;
+            animation-iteration-count: infinite;
+        }
+
+        #animation12 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 12s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 12s;
+            animation-iteration-count: infinite;
+        }
+
+        #animation13 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 13s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 13s;
+            animation-iteration-count: infinite;
+        }
+
+        #animation14 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 14s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 14s;
+            animation-iteration-count: infinite;
+        }
+
+        #animation15 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 15s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 15s;
+            animation-iteration-count: infinite;
+        }
+
+        #animation16 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 16s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 16s;
+            animation-iteration-count: infinite;
+        }
+
+        #animation17 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 17s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 17s;
+            animation-iteration-count: infinite;
+        }
+
+        #animation18 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 18s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 18s;
+            animation-iteration-count: infinite;
+        }
+
+        #animation19 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 19s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 19s;
+            animation-iteration-count: infinite;
+        }
+
+        #animation20 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 20s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 20s;
+            animation-iteration-count: infinite;
+        }
+
+        #animation21 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 21s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 21s;
+            animation-iteration-count: infinite;
+        }
+
+        #animation22 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 22s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 22s;
+            animation-iteration-count: infinite;
+        }
+
+        #animation23 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 23s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 23s;
+            animation-iteration-count: infinite;
+        }
+
+        #animation24 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 24s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 24s;
+            animation-iteration-count: infinite;
+        }
+
+        #animation25 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 25s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 25s;
+            animation-iteration-count: infinite;
+        }
+
+        #animation26 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 26s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 26s;
+            animation-iteration-count: infinite;
+        }
+
+        #animation27 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 27s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 27s;
+            animation-iteration-count: infinite;
+        }
+
+        #animation28 {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            -webkit-animation-name: example; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 28s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            animation-name: example;
+            animation-duration: 28s;
+            animation-iteration-count: infinite;
+        }
+
+        #layer {
+            display: none;
+            opacity: .9;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            background: #FFF;
+            width: 100%;
+            z-index: 10;
+        }
+
+        #mbox {
+            display: none;
+            position: fixed;
+            background: none;
+            width: 550px;
+            z-index: 10;
+        }
+
+            #mbox > div {
+                font-size: 19px;
+                color: #000000;
+            }
+
+        #hbox {
+            font-size: 19px;
+            padding: 10px;
+        }
+
+        #bbox {
+            font-size: 20px;
+            padding: 20px;
+        }
+
+        #fbox {
+            font-size: 20px;
+            padding: 20px;
+        }
+
+        #btnOK {
+            border: 3px solid black;
+            border-radius: 50%;
+            color: red;
+            width: 3em;
+            height: 3em;
+            font-size: x-large;
+            background: none;
+        }
+    </style>
+    <script>
+        function CustomAlert() {
+            this.render = function (dialog) {
+                var w = window.innerWidth;
+                var h = window.innerHeight;
+                var layer = document.getElementById('layer');
+                var mbox = document.getElementById('mbox');
+                layer.style.display = "block";
+                layer.style.height = h + "px";
+                mbox.style.left = w / 2 - (550 * .5) + "px";
+                mbox.style.top = "30%";
+                mbox.style.display = "block";
+                document.getElementById('hbox').innerHTML = "Message";
+                document.getElementById('bbox').innerHTML = dialog;
+                document.getElementById('fbox').innerHTML = '<button onclick="Alert.ok()" id="btnOK">OK</button>';
+            }
+            this.ok = function () {
+                document.getElementById('mbox').style.display = "none";
+                document.getElementById('layer').style.display = "none";
+            }
+        }
+        var Alert = new CustomAlert();
+    </script>
+</head>
+<body>
+    <div id="layer"></div>
+    <div id="mbox">
+        <div id="animation1"></div>
+        <div id="animation2"></div>
+        <div id="animation3"></div>
+        <div id="animation4"></div>
+        <div id="animation5"></div>
+        <div id="animation6"></div>
+        <div id="animation7"></div>
+        <div id="animation8"></div>
+        <div id="animation9"></div>
+        <div id="animation10"></div>
+        <div id="animation11"></div>
+        <div id="animation12"></div>
+        <div id="animation13"></div>
+        <div id="animation14"></div>
+        <div id="animation15"></div>
+        <div id="animation16"></div>
+        <div id="animation17"></div>
+        <div id="animation18"></div>
+        <div id="animation19"></div>
+        <div id="animation20"></div>
+        <div id="animation21"></div>
+        <div id="animation22"></div>
+        <div id="animation23"></div>
+        <div id="animation24"></div>
+        <div id="animation25"></div>
+        <div id="animation26"></div>
+        <div id="animation27"></div>
+        <div id="animation28"></div>
+
+        <div>
+            <div id="hbox"></div>
+            <div id="bbox"></div>
+            <div id="fbox"></div>
+        </div>
+    </div>
+
+    <h1>Custom Alert or Message Box</h1>
+    <br /><br />
+    <p id="someElement"></p>
+    <button onclick="Alert.render('Pulsating red square...')" id="display">Custom Alert</button>
+</body>
+</html>

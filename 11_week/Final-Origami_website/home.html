@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<link type="image/jpg" rel="icon" href="Images/icon.jpg">
+	<meta name="description" content="HTML webpage - introduction, photos, videos, and techniques about the art of origami" />
+	<meta name="keywords" content="HTML5, origami, CSS, copyright" />
+	<meta name="author" content="Ana Carolina de Souza Mendes" />
+	<meta name="instructor" content="Christy Hernandez" />
+	<title>The Art of Origami</title>
+	<link rel="stylesheet" href="origami.css">
+</head>
+<body>
+	<header id="top">
+		<!-- Navigation -->
+		<nav id="intro">
+			<!-- Icon for sidebar navigation -->
+			<img src="Images/nav.png" alt="navigation sidebar" id="navSideBar" onclick="openNav()"/>
+			<!-- Items in sidebar navigation -->
+			<div id="mySidenav" class="sidenav">
+			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			  <a href="home.html">Home</a>
+			  <a href="photos.html">Photos</a>
+			  <a href="videos.html">Videos</a>
+			  <a href="techniques.html">Techniques</a>
+			</div>
+		</nav>
+		<!-- Website Title -->
+		<h1 id="BigH1">The Art of Origami</h1>
+	</header>
+	<article id="home">
+		<!-- Introduction section -->
+		<section>
+			<h2>Introduction</h2>
+			<p>Origami (折り紙, from ori meaning "folding", and kami meaning "paper" (kami changes to gami due to rendaku)) is the art of paper folding, which is often associated with Japanese culture. In modern usage, the word "origami" is used as an inclusive term for all folding practices, regardless of their culture of origin. The goal is to transform a flat square sheet of paper into a finished sculpture through folding and sculpting techniques. Modern origami practitioners generally discourage the use of cuts, glue, or markings on the paper. Origami folders often use the Japanese word kirigami to refer to designs which use cuts, although cutting is more characteristic of Chinese papercrafts.</p>
+			<p>The small number of basic origami folds can be combined in a variety of ways to make intricate designs. The best-known origami model is the Japanese paper crane. In general, these designs begin with a square sheet of paper whose sides may be of different colors, prints, or patterns. Traditional Japanese origami, which has been practiced since the Edo period (1603–1867), has often been less strict about these conventions, sometimes cutting the paper or using nonsquare shapes to start with. The principles of origami are also used in stents, packaging and other engineering applications.</p>
+		</section>
+		<!-- Top | Photos links -->
+		<p id="refNextPages"><a href="#top">Top</a> | <a href="photos.html">Photos ></a></p>
+	</article>
+	<footer>
+		<p id="footer">The text content of this site was lovingly borrowed from the Wikipedia article on Origami on May 6 2018 under the Creative Commons Attribution-ShareAlike License. Licensing terms of content from other sources (photos, etc) is noted along with each respective resource.</p>
+	</footer>
+	<!-- JavaScript -->
+	<script>
+		function openNav() {
+		    document.getElementById("mySidenav").style.width = "250px";
+		}
+
+		function closeNav() {
+		    document.getElementById("mySidenav").style.width = "0";
+		}
+	</script>
+</body>
+</html>

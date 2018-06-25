@@ -1,0 +1,192 @@
+body {
+  font-size: 100%;
+  background-color: black;
+  font-family: "Calibri Light", sans-serif;
+  margin: 0;
+}
+
+header#top {
+  background-image: url("Images/origami-dragon2.jpg");
+  background-size: 100%;
+  height: 37em;
+  justify-content: center;
+}
+header#topTech {
+  background-image: url("Images/navBg.png");
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  height: 6em;
+}
+
+h1#BigH1 {
+  text-align: center;
+  padding: 230px 0 230px 0;
+  font-size: 600%;
+  font-weight: bolder;
+  color: white;
+  margin: 0;
+}
+
+h1#SmallH1 {
+  float: left;
+  font-size: 320%;
+  font-weight: bolder;
+  color: white;
+  margin: 0;
+  text-align: center;
+  padding: 18px 20px 18px 30px;
+}
+
+#navigationSimple {
+  float: right;
+  padding: 33px 30px 33px 0;
+}
+
+#navigationSimple a{
+  font-size: 180%;
+  text-align: center;
+  font-weight: bolder;
+  color: white;
+  padding: 33px 30px 33px 30px;
+  text-decoration: none;
+}
+
+#navSideBar {
+  float: left;
+  padding: 40px 0 0 40px;
+  cursor: pointer;
+  width: 4%;
+  height: 4%;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 30px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+article#home {
+  background-color: white;
+  padding: 30px;
+  height: 600px;
+}
+
+article#techniques {
+  background-color: white;
+  padding: 30px;
+  height: 1050px;
+}
+
+article#photos {
+  background-color: white;
+  padding: 20px 80px 0 80px;
+  height: 735px;
+  margin-bottom: 0;
+}
+
+article#photos2 {
+  margin-top: 0;
+  background-color: white;
+  padding: 0 80px 80px 80px;
+  height: 240px;
+}
+
+article#photos3 {
+  margin-top: 0;
+  background-color: white;
+  padding: 0 80px 80px 80px;
+  height: 350px;
+}
+
+article#videos {
+  margin-top: 0;
+  background-color: white;
+  padding: 20px 80px 80px 80px;
+  height: 1240px;
+}
+
+article h2 {
+  text-align: center;
+  font-size: xx-large;
+  padding-bottom: 20px;
+}
+
+article p {
+  padding: 20px 30px 20px 30px;
+  text-align: justify;
+  line-height: 200%;
+}
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery iframe {
+    width: 500px;
+    height: 280px;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+#refNextPages {
+  float: right;
+  padding: 20px 35px 20px 20px;
+}
+
+footer {
+  background-color: black;
+}
+
+#footer {
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: small;
+}

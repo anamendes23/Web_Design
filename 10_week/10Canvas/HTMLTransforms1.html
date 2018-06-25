@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        hr{
+           border:5px groove red;
+        }
+        div{
+            box-shadow:15px 15px 50px darkgreen;
+            width:200px;
+            height:200px;
+            background-color:darkgreen;
+            color:white;
+            border:4px solid yellow;
+        }
+        .class1{
+            /*-webkit-transform:translate(50px,100px);/*Safari*/
+            /*-ms-transform:translate(50px,100px);/*IE9*/
+            transform:translate(50px,100px);/*stqndard syntax*/
+        }
+        .class2{
+            transform:rotate(30deg);
+            background-color:blue;
+        }
+        .class3{
+            transform:rotate(-30deg);
+        }
+        .larger{
+            transform:scale(1.75,1.5) translate(250px,-100px);
+
+        }
+        .smaller{
+            transform:scale(0.6,0.4) translate(1300px,-1000px);
+        }
+        .skewx{
+            transform:skewX(35deg) translate(150px) ;
+        }
+        .skewy{
+            transform:skewY(20deg) translate(150px);
+        }
+        .skew{
+            transform:skew(20deg,15deg) translate(150px);
+        }
+        .rotate_scale{
+            transform: rotate(25deg) scale(0.75);
+        }
+        .skew_translate{
+            transform:skew(10deg,20deg) translate(200px);
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS3 Transforms</h2>
+    <p>
+        CSS3 transforms allow you to translate, rotate, scale,and skew elements.<br/>
+        It lets an element change shape, size, and position.
+
+    </p>
+    <div>
+        The following are 2D transformation methods:
+        <ul>
+            <li>translate()</li>
+            <li>rotate()</li>
+            <li>scale()</li>
+            <li>skewX()</li>
+            <li>matrix()</li>
+        </ul>
+    </div>
+    <h3>translate() Method</h3>
+    <div class="class1">
+        The translate() method moves an element from its current position.<br/>
+        translate(50px,100px); moves the elements 50 px to the raght and 100px down from
+        its current position
+    </div>
+    <!--==================================================================================================================================-->
+    <hr />
+    <br/><br />
+    <h3>rotate() Method</h3>
+    <p>The rotate() method rotates an element clockwise (positive value), or 
+    counter-clockwise(negative value) according to a given degree.<br/>
+    Example: rotate(30deg), will rotate an element clockwise by 30 degree, the 
+    center of ratation is the center of the element.</p>
+
+    <div class="class2">
+        rotating this element by 30 degrees (clockwise)
+    </div>
+    <div class="class3">
+        rotating this element by -30 degrees ( counter clockwise)
+    </div>
+    <!--==================================================================================================================================-->
+    <hr />
+    <br /><br />
+    <h3>scale() Method</h3>
+    <p>The scale() method increases or decreases the size of an elemnt</p>
+    <p>Example: scale(2,3) increases the element to be 2 times of its original width, and 3 times of its original height</p>
+    <p>You could also use values less than 1 to scale an element down or make it appear smaller</p>
+    <div class="normal">
+        Appears Normal size div
+    </div>
+    <div class="larger">
+        Appears Larger size div
+    </div>
+    <div class="smaller">
+        Appears Smaller size div
+    </div>
+    <!--==================================================================================================================================-->
+   
+    <hr />
+    <hr />
+   <br />
+    <h3>SkewX() Method</h3>
+    <p>Skews an element along the X-axis by a given angle</p>
+    <p>skewX(35deg) skews the element 35 degrees along the X-axis</p>
+
+    <div class="skewx">
+        This div element has been skewed aling the x-axis by 20 degrees
+    </div>
+    <h3>SkewY() Method</h3>
+    <p>Skews an element along the Y-axis by a given angle</p>
+    <p>skewY(35deg) skews the element 35 degrees along the Y-axis</p>
+    <div class="skewy">
+        This div element has been skewed aling the y-axis by 20 degrees
+    </div>
+    <h3>skew() Method</h3>
+    <p>Skews an element along the X-axis Y-axis by a given angle</p>
+    <p>skew(20deg,15deg) skews the element 20 degrees along the X-axis, and 15 degree along the Y-axis</p>
+    <div class="skew">
+        This div element has been skewed along both the y-axis and the y-axis 
+    </div>
+    <!--==================================================================================================================================-->
+    <hr />
+    <hr />
+    <br /><br />
+    <h3>Combining transforms</h3>
+    <p>We can combine transformations such as:<br /> transform: rotate(25deg) scale(0.75);<br/>
+    transform: skew(10deg,20deg) translate(30px);</p>
+    <br />
+    <div class="rotate_scale">
+        Combining rotate and scale
+    </div>
+    <br />
+    <div class="skew_translate">
+        Combining skew and translate
+    </div>
+</body>
+</html>

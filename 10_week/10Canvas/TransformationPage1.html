@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        canvas{border:2px solid black;}
+    </style>
+    <script>
+        var context;
+        var canvas;
+
+        function initialize() {
+            canvas = document.getElementById("mycanvas");
+            context = canvas.getContext("2d");
+            
+
+        }
+        function clearCanvas() {
+            //reset the graphics(context) transformation
+            context.setTransform(1, 0, 0, 1, 0, 0);
+            context.beginPath();//clear context from previous graphics
+            context.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+        function scale() {
+            //draw rectangle
+            context.strokeRect(5, 5, 25, 15);
+            //scale both width and height by factor of 2
+            context.scale(2, 2);
+            //redraw rectangle
+            context.strokeRect(5, 5, 25, 15);
+            //scale both width and height by factor of 2
+            context.scale(2, 2);
+            //redraw rectangle
+            context.strokeRect(5, 5, 25, 15);
+        }
+        function rotate() {
+            context.fillStyle = 'yellow';
+            context.fillRect(100, 75, 100, 50);
+            //rotate by 45 degrees
+            context.rotate(Math.PI / 12);
+            context.fillStyle = 'blue';
+            context.fillRect(100, 75, 100, 50);
+
+        }
+
+        function trans() {
+            //draw rectangle with respect to the default origin (upper left corner)
+            context.fillStyle = 'orange';
+            context.fillRect(50, 10, 100, 75);
+            //now translate the origin to the middle of the canvas
+            context.translate(canvas.width / 2, canvas.height / 2);
+            //redraw the same rectangle after the translation
+            context.fillStyle = 'orange';
+            context.fillRect(50, 10, 100, 75);
+
+        }
+    </script>
+</head>
+<body onload="initialize();">
+    <canvas id="mycanvas" width="300" height="200"></canvas>
+    <h4>Canvas Transformations</h4>
+    <ul>
+        <li>scale() : scales the current drawing biggier or smaller</li>
+        <li>rotate(): rotates the current drawing</li>
+        <li>translate(): remaps the (0,0) position on the canvas</li>
+        <li>transform(): replaces the current transformation matrix for the drawing</li>
+        <li>setTransform(): Resets the current transformation to the identity matrix, then runs transform</li>
+    </ul>
+    <button onclick="clearCanvas()">Clear Canvas</button>
+    <div>
+        <h5>scale()</h5>
+        <p>It scales the drawing by some factor multiplier like: 2,0.5,...<br />
+        The position will also be scaled. The scale method affect current and future
+        drawings only.
+        </p>
+        <button onclick="scale()">scale</button>
+    </div>
+    <div>
+        <h5>rotate(angle)</h5>
+        <p>
+            The rotate() methos rotates the drawing clockwise by an angle specified in 
+            radians. The rotation occurs with respect to the canvas origin. By default
+            the canvas origin is on the upper left corner of the canvas. <br />
+            The rotate()method does not affect any drawing already on canvas. it affects
+            only drawings after the rotate method has executed.
+
+        </p>
+        <button onclick="rotate()">rotate</button>
+    </div>
+
+    <div>
+        <h5>Translate(x,y)</h5>
+        <p>
+           The translate() method remaps the (0,0)origin position on the canvas.<br />
+            It moves or translate the origin to the values set by x and y.<br />
+            All subsequent drawings will be translated (or shifted) in the x direction set
+            by the x value, and in the y-direction set by the y valuel
+
+        </p>
+        <button onclick="trans()">translate to the middle</button>
+    </div>
+
+   
+</body>
+</html>
+<!--
+    Lab Assignment Due Friday the 12th
+    New html page
+    draw a rectangle, then use a timer that scales it by some factor (like 1.1) every second
+    draw a rectangle, then use a timer to rotate it by 1 degree every second
+    (1 degree = Math.PI/180)
+-->

@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        var context;
+        var canvas;
+
+        var ballDeltaX;
+        var ballDeltaY;
+        var ballX = 300;
+        var ballY = 300;
+        var ballRadius = 10;
+
+
+        function initialize() {
+            canvas = document.getElementById("canvas");
+            context = canvas.getContext('2d');
+
+            //start tracking keystrokes
+            document.addEventListener("keydown", handleKeyDown, false);
+            document.addEventListener("keyup", handleKeyUp, false);
+
+            drawBall();
+            drawPaddle();
+
+            startGame();
+        }
+        //=========================DRAW PADDLE========================================
+        var paddleX = 200;
+        var paddleY = 360;
+
+        var paddleWidth = 100;
+        var paddleHeight = 15;
+
+        var paddleDeltaX = 0;
+        var paddleDeltaY = 0;
+
+        var paddleSpeedX = 10;
+
+        function drawPaddle() {
+            context.fillStyle = "#000000";
+            context.fillRect(paddleX, paddleY, paddleWidth, paddleHeight);
+        }
+        //============================MOVE PADDLE===============================================
+
+        function handleKeyDown(evt) {
+            if (evt.keyCode == 39)
+                paddleMove = 'RIGHT';
+            else if (evt.keyCode == 37)
+                paddleMove = 'LEFT';
+        }
+
+        function handleKeyUp(evt) {
+            if (evt.keyCode == 39)
+                paddleMove = 'NONE';
+            else if (evt.keyCode == 37)
+                paddleMove = 'NONE';
+        }
+
+
+        function movePaddle() {
+            if (paddleMove == 'LEFT') {
+                paddleDeltaX = -paddleSpeedX;
+            } else if (paddleMove == 'RIGHT') {
+                paddleDeltaX = paddleSpeedX;
+            } else {
+                paddleDeltaX = 0;
+            }
+            // If paddle reaches the side of the screen, then don't let it move any further
+            if (paddleX + paddleDeltaX < 0 || paddleX + paddleDeltaX + paddleWidth > canvas.width) {
+                paddleDeltaX = 0;
+            }
+            paddleX = paddleX + paddleDeltaX;
+        }
+        //=========================Draw and Move Ball======================
+        function drawBall() {
+            // Context.beginPath when you draw primitive shapes
+            context.beginPath();
+
+            // Draw arc at center ballX, ballY with radius ballRadius, 
+            // From 0 to 2xPI radians (full circle)
+            context.arc(ballX, ballY, ballRadius, 0, Math.PI * 2, true);
+
+            // Fill up the path that you just drew
+            context.fill();
+        }
+
+        function moveBall() {
+            // First check if we will bump into something
+
+            // If top of the ball touches the top then reverse Y direction
+            if (ballY + ballDeltaY - ballRadius < 0) {
+                ballDeltaY = -ballDeltaY;
+                //bouncingSound.play();
+            }
+
+            // If the bottom of the ball touches the bottom of the screen then end the game
+            if (ballY + ballDeltaY + ballRadius > canvas.height) {
+                //endGame();
+                //reverse direction
+                ballDeltaY = -ballDeltaY;
+            }
+            // If side of ball touches either side of the wall then reverse X direction
+            //left of ball moves too far left
+            if ((ballX + ballDeltaX - ballRadius < 0) ||
+                //or right side of ball moves too far right
+            (ballX + ballDeltaX + ballRadius > canvas.width)) {
+                // or if ball collides in Y direction with bricks 
+                ballDeltaX = -ballDeltaX;
+                //bouncingSound.play();
+            }
+
+            // if bottom of ball reaches the top of paddle,
+            if (ballY + ballDeltaY + ballRadius >= paddleY) {
+                // and it is positioned between the two ends of the paddle (is on top)
+                if (ballX + ballDeltaX >= paddleX &&
+                    ballX + ballDeltaX <= paddleX + paddleWidth) {
+                    ballDeltaY = -ballDeltaY;
+                    bouncingSound.play();
+                }
+            }
+
+            // Move the ball
+            ballX = ballX + ballDeltaX;
+            ballY = ballY + ballDeltaY;
+        }
+
+
+        var gameLoop;
+
+        function startGame() {
+            ballDeltaX = -2;
+            ballDeltaY = -4;
+
+            paddleMove = 'NONE';
+            paddleDeltaX = 0;
+
+            //call the animate function every 20 ms
+            gameLoop = setInterval(animate, 20);
+
+        }
+        function animate() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
+            movePaddle();//update the paddle position
+            moveBall();
+            drawPaddle();
+            drawBall();
+
+        }
+        function endGame() {
+            clearInterval(gameLoop);
+            context.fillText("Game's Over!!!", canvas.width / 2, canvas.height / 2);
+        }
+
+    </script>
+
+</head>
+<body onload="initialize();" >
+    <canvas id="canvas" width="500" height="400"
+            style="border:1px solid #0026ff; background-color:gray"></canvas>
+
+    
+
+</body>
+</html>
+
+<!--
+    put the ball moving code (from previous html doc) and the paddle code together
+-->
